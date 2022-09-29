@@ -12,8 +12,8 @@ sudo apt clean && sudo apt autoremove -y
 echo "Upgrading programs"
 sudo apt update -y && sudo apt upgrade -y
 
-echo "Installing gnome extensions, gpaste and presetup for Brave browser"
-sudo apt install apt-transport-https curl build-essential linux-headers-$(uname -r) gnome-shell-extensions gnome-shell-extensions-gpaste gnome-shell-extension-gpaste -y
+echo "Installing fonts, gnome extensions, gpaste and presetup for Brave browser"
+sudo apt install apt-transport-https curl build-essential linux-headers-$(uname -r) gnome-shell-extensions gnome-shell-extensions-gpaste gnome-shell-extension-gpaste fonts-firacode -y
 
 echo "Installing Slack, VS Code and Postman"
 sudo snap refresh
