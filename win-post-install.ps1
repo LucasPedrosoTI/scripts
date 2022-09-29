@@ -84,7 +84,8 @@ Install-PackageProvider -Name NuGet -Confirm:$false
 Install-Module posh-git -Scope CurrentUser -Force
 
 $OhMyPoshConfig = "`noh-my-posh --init --shell pwsh --config ~/AppData/Local/Programs/oh-my-posh/themes/jandedobbeleer.omp.json | Invoke-Expression`nImport-Module posh-git"
-Add-Content $PROFILE $OhMyPoshConfig 
+Add-Content $PROFILE $OhMyPoshConfig
+# install firacode font: oh-my-posh font install FiraCode
 
 #Installing chocolatey
 Write-Output "Installing chocolatey"
