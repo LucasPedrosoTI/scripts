@@ -34,7 +34,8 @@ $settingsJson | Out-File $settingsPath -Encoding utf8
 #Install New apps
 Write-Output "Installing Apps"
 $apps = @( 
-    @{name = "Microsoft.VisualStudioCode" }, 
+    @{name = "Microsoft.VisualStudioCode" },
+    @{name = "JetBrains.IntelliJIDEA.Community"}, 
     @{name = "OpenJS.NodeJS.LTS" },
     @{name = "Git.Git" }, 
     @{name = "Oracle.MySQL" },
