@@ -34,7 +34,6 @@ $settingsJson | Out-File $settingsPath -Encoding utf8
 #Install New apps
 Write-Output "Installing Apps"
 $apps = @( 
-    @{name = "Microsoft.VisualStudioCode" },
     @{name = "JetBrains.IntelliJIDEA.Community"}, 
     @{name = "OpenJS.NodeJS.LTS" },
     @{name = "Git.Git" }, 
@@ -67,6 +66,8 @@ Foreach ($app in $apps) {
         Write-host "Skipping Install of " $app.name
     }
 }
+
+winget install Microsoft.VisualStudioCode --override '/SILENT /mergetasks="!runcode,addcontextmenufiles,desktopicon,addtopath,associatewithfiles"'
 
 #Remove Apps
 Write-Output "Removing Apps"
