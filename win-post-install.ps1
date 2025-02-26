@@ -49,7 +49,8 @@ $apps = @(
     @{name = "Microsoft.WindowsTerminal"; source = "msstore" }, 
     @{name = "9PKTQ5699M62"; source = "msstore" }, # icloud
     @{name = "9NKSQGP7F2NH"; source = "msstore" }, # whatsapp
-    @{name = "JanDeDobbeleer.OhMyPosh" } 
+    @{name = "JanDeDobbeleer.OhMyPosh" },
+    @{name = "Microsoft.PowerToys" } 
 );
 Foreach ($app in $apps) {
     $listApp = winget list -e -q $app.name
