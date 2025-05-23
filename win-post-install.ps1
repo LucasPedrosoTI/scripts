@@ -35,7 +35,7 @@ $settingsJson | Out-File $settingsPath -Encoding utf8
 Write-Output "Installing Apps"
 $apps = @( 
     @{name = "JetBrains.IntelliJIDEA.Community"}, 
-    @{name = "OpenJS.NodeJS.LTS" },
+    @{name = "CoreyButler.NVMforWindows"},
     @{name = "Git.Git" }, 
     @{name = "Oracle.MySQL" },
     @{name = "Google.Chrome" },
@@ -45,7 +45,8 @@ $apps = @(
     @{name = "Zoom.Zoom" },
     @{name = "RARLab.WinRAR" },
     @{name = "Oracle.VirtualBox" },
-    @{name = "AdoptOpenJDK.OpenJDK.11" },
+    @{name = "Azul.Zulu.24.JDK" },
+    @{name = "Python.Python.3.12"},
     @{name = "Microsoft.WindowsTerminal"; source = "msstore" }, 
     @{name = "9PKTQ5699M62"; source = "msstore" }, # icloud
     @{name = "9NKSQGP7F2NH"; source = "msstore" }, # whatsapp
@@ -69,6 +70,12 @@ Foreach ($app in $apps) {
 }
 
 winget install Microsoft.VisualStudioCode --override '/SILENT /mergetasks="!runcode,addcontextmenufiles,desktopicon,addtopath,associatewithfiles"'
+
+#Install NodeJS
+Write-Output "Installing NodeJS..."
+nvm install lts
+nvm use lts
+node -v
 
 #Remove Apps
 Write-Output "Removing Apps"
