@@ -16,6 +16,8 @@ git config --global alias.sw switch
 git config --global alias.ps push
 git config --global alias.pl pull
 git config --global alias.rs reset
+git config --global alias.sh stash
+git config --global alias.sw switch
 
 # Alias to list all saved alias
 git config --global alias.alias "!git config --get-regexp ^alias\."
