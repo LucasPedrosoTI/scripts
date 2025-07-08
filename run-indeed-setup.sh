@@ -1,0 +1,1 @@
+wget -N https://boxy.sandbox.indeed.net/bootstrap -O /tmp/system-setup ; bash /tmp/system-setup
