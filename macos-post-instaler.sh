@@ -15,12 +15,17 @@ apps=(
     "bitwarden"
     "displaylink"
     "font-fira-code-nerd-font"
+    "bisq"
+    "notion"
 )
 
 for app in "${apps[@]}"; do
     echo "Installing $app..."
     brew install --cask $app
 done
+
+# setup bisq
+sudo xattr -d com.apple.quarantine /Applications/Bisq.app
 
 # Install oh-my-posh
 echo "Installing oh-my-posh..."
